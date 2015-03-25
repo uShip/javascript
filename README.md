@@ -85,7 +85,7 @@
 
   - (ES6) Use [enhanced object literal instantiation](https://github.com/lukehoban/es6features#enhanced-object-literals) to reduce boilerplate when assigning values to properties, methods, and dynamically computed property names:
 
-    ```
+    ```javascript
     // bad
     let private = true,
         weakness = 'kryptonite';
@@ -465,7 +465,7 @@
 
   - (ES6) Prefer the use of [rest params](https://github.com/lukehoban/es6features#default--rest--spread) instead of the `arguments` keyword.
 
-    ```
+    ```javascript
     // bad
     function stuff () {
         console.log(arguments.length);
@@ -1585,7 +1585,7 @@
 
   - When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event. For example, instead of:
 
-    ```js
+    ```javascript
     // bad
     $(this).trigger('listingUpdated', listing.id);
 
@@ -1596,7 +1596,7 @@
 
     prefer:
 
-    ```js
+    ```javascript
     // good
     $(this).trigger('listingUpdated', { listingId : listing.id });
 
